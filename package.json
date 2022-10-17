@@ -1,0 +1,11 @@
+{
+  "name": "book-ind",
+  "version": "1.0.0",
+  "description": "App for booking the appointments at IND",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Anton Perebyinis",
+  "license": "ISC"
+}
