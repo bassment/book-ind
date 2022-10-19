@@ -4,12 +4,62 @@
 </head>
 <body>
     <div>
+        <h2>Form:</h2>
+
+        <form action={{bookUrl}} method="POST" target="dummyframe">
+            <p>
+                <label for="range">Range:</label>
+                <input name="range" id="range" type="datetime-local">
+            </p>
+            <p>
+                <label for="name">Name:</label>
+                <input name="name" id="name" />
+            </p>
+            <p>
+                <label for="lastname">Lastname:</label>
+                <input name="lastname" id="lastname" />
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input name="email" id="email" />
+            </p>
+            <p>
+                <label for="phone">Phone:</label>
+                <input name="phone" id="phone" />
+            </p>
+            <p>
+                <label for="Vnumber">Vnumber:</label>
+                <input name="Vnumber" id="Vnumber" />
+            </p>
+            <div>
+                <button>Send</button>
+            </div>
+        </form>
+    </div>
+    <div>
         <h2>Users:</h2>
         {{#users}}
         <ul>
-            <li>{{name}}</li>
+            <li>
+                <p>
+                    <b>Name:</b> {{name}}
+                </p>
+                <p>
+                    <b>Lastname:</b> {{lastname}}
+                </p>
+                <p>
+                    <b>Email:</b> {{email}}
+                </p>
+                <p>
+                    <b>Phone:</b> {{phone}}
+                </p>
+                <p>
+                    <b>Vnumber:</b> {{Vnumber}}
+                </p>
+            </li>
         </ul>
         {{/users}} 
     </div>
+    <iframe name="dummyframe" id="dummyframe" style="display: none"></iframe>
 </body>
 </html>

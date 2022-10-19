@@ -8,7 +8,7 @@ provider:
   runtime: nodejs12.x
   iamRoleStatements:
     - Effect: Allow
-      Action: dynamodb:Scan
+      Action: ["dynamodb:Scan", "dynamodb:PutItem"]
       Resource: arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/users
 
 functions:
@@ -20,6 +20,7 @@ functions:
           method: get
     environment:
       users_api: https://5c11c8bnbg.execute-api.us-east-1.amazonaws.com/users
+      book_api: https://5c11c8bnbg.execute-api.us-east-1.amazonaws.com/book
 
   get-users:
     handler: functions/get-users.handler
@@ -36,6 +37,8 @@ functions:
       - httpApi:
           path: /book
           method: post
+    environment:
+      users_table: users
 
 resources:
   Resources:
