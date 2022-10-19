@@ -7,5 +7,14 @@
     "test": "test"
   },
   "author": "Anton Perebyinis",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk": "^2.1234.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "mustache": "^4.2.0",
+    "superagent": "^8.0.2",
+    "superagent-promise": "^1.1.0"
+  }
 }
